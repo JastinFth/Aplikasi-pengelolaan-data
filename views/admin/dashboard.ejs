@@ -1,0 +1,41 @@
+<div class="mx-5 mb-3">
+  <div class="row">
+    <div class="col">
+      <div class="p-4 rounded-2 shadow-sm bg-custom-white">
+        <h1 class="fs-5">Hey <%= user.name %>!</h1>
+        <h1 class="fs-5">Welcome<span class="fs-5">👋</span></h1>
+      </div>
+    </div>
+    <div class="col">
+      <div class="p-4 rounded-2 shadow-sm bg-custom-white">
+        <h1 class="fs-5">Total Users</h1>
+        <h2 class="fs-5"><span class="mx-2 text-success fs-5"><%= totalUsers %></span>Users</h2>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mx-5">
+  <div class="bg-custom-white shadow-sm rounded-2 p-5">
+    <h3 class="mb-3">All Users</h3>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Username</th>
+          <th scope="col">Name</th>
+          <th scope="col">Role</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% users.forEach((user, no) => { %>
+         <tr>
+            <th scope="row"><%= no + 1 %></th>
+            <td><%= user.username %></td>
+            <td><%= user.name %></td>
+            <td><%= user.role %></td>
+         </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</div>

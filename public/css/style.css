@@ -1,0 +1,114 @@
+body {
+  background-color: #F7FAFF;
+  overflow-x: hidden;
+}
+
+.side-bar {
+  width: 280px;
+  background-color: #ffffff;
+  overflow-y: auto;
+}
+
+.content {
+  overflow-y: auto;
+  height: 100vh;
+}
+
+.button-add {
+  color: #ffffff;
+  background-color: #005D97;
+}
+
+.nav-pills .nav-link.active-sidebar {
+  color: #30AFFF;
+  background-color: #E0F3FF;
+}
+
+#link-dropdown {
+  height: 20px;
+}
+
+#profile-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
+.modal-footer {
+  border-top: none;
+}
+
+.background-input {
+  background-color: #E2E8EE;
+  border: none;
+}
+
+.background-input:focus {
+  box-shadow: none;
+  background-color: #E2E8EE;
+}
+
+.form-select {
+  background-color: #E2E8EE;
+}
+
+.form-select:focus {
+  box-shadow: none;
+  border: #E2E8EE;
+}
+
+.icon-eye {
+  cursor: pointer;
+  right: 27px;
+  bottom: 32%;
+  transform: translateY(-50%);
+}
+
+.icon-eye-profile {
+  cursor: pointer;
+  right: 27px;
+  bottom: 10%;
+  transform: translateY(-50%);
+}
+
+#search {
+  width: 300px;
+}
+
+#icon-magnifying {
+  color: #808080;
+  border: none;
+  border-bottom: 1px #808080 solid;
+  padding: 0;
+  padding-left: 10px;
+  border-radius: 0;
+}
+
+#inputSearch {
+  border: none;
+  border-bottom: 1px #808080 solid;
+  border-radius: 0;
+  background-color: #F7FAFF;
+}
+
+.bg-custom-white {
+  background-color: #ffffff;
+}
+
+.btn-taspen {
+  background-color: #005D97;
+}
+
+#inputSearch:focus {
+  box-shadow: none;
+}
+
+#preview {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}

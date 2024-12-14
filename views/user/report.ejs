@@ -1,0 +1,32 @@
+<div class="mx-5">
+  <div class="bg-custom-white shadow-sm rounded-2 p-5">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Notas</th>
+          <th scope="col">No Dosir</th>
+          <th scope="col">Name</th>
+          <th scope="col">Shelf</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% dosirs.forEach((dosir, no) => { %>
+         <tr>
+            <th scope="row"><%= no + 1 %></th>
+            <td><%= dosir.notas %></td>
+            <td><%= dosir.no_dosir %></td>
+            <td><%= dosir.name %></td>
+            <td><%= dosir.shelf %></td>
+         </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    <div class="d-flex justify-content-end mt-4">
+      <a href="/user/report/download" class="btn btn-primary btn-taspen">
+        <i class="fa-solid fa-file-arrow-down me-1"></i>
+        Download Report
+      </a>
+    </div>
+  </div>
+</div>

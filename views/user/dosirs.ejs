@@ -1,0 +1,80 @@
+<div class="mx-5 mb-5">
+  <% if (locals.notFound) { %>
+    <div class="alert alert-warning text-center" role="alert">
+      Tidak ada data yang ditemukan untuk pencarian "<%= searchTerm %>"
+    </div>
+  <% } %>
+
+  <div class="bg-custom-white shadow-sm rounded-2 p-5">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Notas</th>
+          <th scope="col">No Dosir</th>
+          <th scope="col">Name</th>
+          <th scope="col">Shelf</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% dosirs.forEach((dosir, no) => { %>
+          <tr>
+            <th scope="row"><%= no + 1 %></th>
+            <td><%= dosir.notas %></td>
+            <td><%= dosir.no_dosir %></td>
+            <td><%= dosir.name %></td>
+            <td><%= dosir.shelf %></td>
+            <td>
+              <button type="button" class="btn fw-semibold py-1 button-add" data-bs-toggle="modal" data-bs-target="#editModal" 
+                data-id="<%= dosir.id %>" 
+                data-notas="<%= dosir.notas %>"
+                data-nodosir="<%= dosir.no_dosir %>"
+                data-name="<%= dosir.name %>"
+                data-shelf="<%= dosir.shelf %>">
+                <i class="fa-solid fa-pen-to-square me-1"></i>
+                Edit
+              </button>
+            </td>
+          </tr>
+         <% }) %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title" id="ModalLabel">Edit Dosir</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form class="mx-4" id="editDosirForm">
+        <div class="modal-body">
+          <input type="hidden" id="editDosirId">
+          <div class="mb-3">
+            <label for="inputNotasEdit" class="form-label">Notas</label>
+            <input type="text" class="form-control background-input" id="inputNotasEdit" placeholder="Add Notas">
+          </div>
+          <div class="mb-3">
+            <label for="inputNoDosirEdit" class="form-label">No Dosir</label>
+            <input type="text" class="form-control background-input" id="inputNoDosirEdit" placeholder="Add No Dosir">
+          </div>
+          <div class="mb-3">
+            <label for="inputNameEdit" class="form-label">Name</label>
+            <input type="text" class="form-control background-input" id="inputNameEdit" placeholder="Add Name">
+          </div>
+          <div class="mb-3">
+            <label for="inputShelfEdit" class="form-label">Shelf</label>
+            <input type="text" class="form-control background-input" id="inputShelfEdit" placeholder="Add Shelf">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" id="deleteDosirBtn">Delete</button>
+          <button type="submit" class="btn button-add">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

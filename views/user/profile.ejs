@@ -1,0 +1,60 @@
+<div class="mx-5 mb-5">
+  <div class="bg-custom-white shadow-sm rounded-2">
+    <div class="px-5 py-4">
+      <h3 class="fs-3 mb-5">Profile</h3>
+      <form action="/user/profile/update" method="post" enctype="multipart/form-data">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-5 text-center">
+            <img src="/images/profiles/<%= user.profile_image || 'default.jpg' %>" alt="profile-img" class="img-thumbnail rounded-circle mb-3" id="preview">
+          </div>
+          <div class="col-7">
+            <div class="mb-3">
+              <label for="prfile_image" class="form-label">Change Profile Picture</label>
+              <input type="file" name="profile_image" id="profile_image" accept="image/jpeg,image/png" class="form-control" onchange="previewImage(this)">
+              <small class="text-muted">Max file size: 2MB. Allowed formats: JPG, PNG</small>
+            </div>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" name="name" id="name" value="<%= user.name %>" class="form-control" required>
+            </div>
+          </div>
+        </div>
+        <div class="text-end">
+          <button type="submit" class="btn btn-primary btn-taspen">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="bg-custom-white shadow-sm rounded-2 mt-4">
+    <div class="px-5 py-4">
+      <h3 class="fs-3 mb-5">Change Password</h3>
+      <form id="changePasswordForm" action="/user/profile/update-password" method="post">
+        <div class="mb-3">
+          <label for="currentPassword" class="form-label">Current Password</label>
+          <div class="position-relative">
+            <input type="password" name="currentPassword" id="currentPassword" class="form-control background-input" required>
+            <i class="fa-solid fa-eye position-absolute icon-eye-profile" id="toggleCurrentPw"></i>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="newPassword" class="form-label">New Password</label>
+          <div class="position-relative">
+            <input type="password" name="newPassword" id="newPassword" class="form-control background-input" required>
+            <i class="fa-solid fa-eye position-absolute icon-eye-profile" id="toggleNewPw"></i>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="confirmPassword" class="form-label">Confirm New Password</label>
+          <div class="position-relative">
+            <input type="password" name="confirmPassword" id="confirmPassword" class="form-control background-input" required>
+            <i class="fa-solid fa-eye position-absolute icon-eye-profile" id="toggleConfirmPw"></i>
+          </div>
+        </div>
+        <div class="text-end">
+          <button type="submit" class="btn btn-primary mt-2 btn-taspen">Change Password</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+

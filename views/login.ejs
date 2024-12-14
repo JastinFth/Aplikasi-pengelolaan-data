@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link href="/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="d-flex align-items-center vh-100">
+        <div class="col">
+          <div class="background">
+            <a href="/" class="logo">
+                <img class="img-logo" src="/images/logo_taspen1.png" alt="taspen">
+            </a>
+            <div class="my-5 mx-5">
+              <p class="fw-semibold fs-4">Log in</p>
+              <form method="post" id="loginForm" action="/login">
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="floatingInput" name="username" placeholder="Username">
+                  <label for="floatingInput">Username</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="password" class="form-control" id="floatingPassword" name="password" placeholder="Password">
+                  <label for="floatingPassword">Password</label>
+                  <i class="fa-solid fa-eye position-absolute icon-eye" id="togglePw"></i>
+                </div>
+                <button type="submit" class="btn btn-taspen text-center d-block mx-auto mt-5"><a href="/view/admin/dashboard.html"><i class="fa-solid fa-arrow-right fa-2xl"></i></a></button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col" >
+          <div class="d-flex justify-content-center align-items-center" style="height: 492px; width: 518px;">
+            <h1 class=" h-25">Hey, <br> Welcome to taspen👋</h1>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </div>
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="errorToast" class="toast align-items-center text-bg-danger border-0" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">
+          <i class="bi bi-exclamation-circle-fill me-2"></i>
+          <span id="errorMessage"></span>
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+  <script src="https://kit.fontawesome.com/0d5f99646b.js" crossorigin="anonymous"></script>
+  <script src="/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/login.js"></script>
+</body>
+</html>
