@@ -1,0 +1,58 @@
+body{
+  background-color: #F7FAFF;
+}
+
+.logo .img-logo {
+  height: 60px;
+}
+
+.background {
+  position: relative;
+  width: 518px;
+  height: 492px;
+  background-image: url(../images/Rectangle\ 3.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.form-control {
+  border: 0;
+  border-radius: 0;
+  border-bottom: 2px solid #E8C21D;
+}
+
+.form-control:focus {
+  border-color: #E8C21D;
+  box-shadow: none;
+}
+
+.btn{
+  padding: 1.5em 1.5em;
+  transition: all 0.2s ease-out;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  color: #ffffff;
+  background-color: #005D97;
+}
+
+.btn-taspen{
+  color: #ffffff;
+  background-color: #005D97;
+}
+
+.icon-eye {
+  cursor: pointer;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.fa-arrow-right {
+  color: #ffffff;
+}
+
+#alert-container {
+  max-width: 400px;
+}
